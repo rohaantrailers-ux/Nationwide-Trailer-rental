@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PRICING_TIERS, COMPANY_DETAILS } from '../data/trailerData';
 import { TrailerType, ModelYearTier } from '../types';
-import { Check, ShieldCheck, ArrowRight, Calculator, Sparkles, TrendingDown, Copy, FileText } from 'lucide-react';
+import { Check, ShieldCheck, ArrowRight, Calculator, Sparkles, Copy, FileText } from 'lucide-react';
 
 interface PricingCalculatorProps {
   onApplyConfiguration: (config: {
@@ -15,7 +15,6 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({ onApplyCon
   const [selectedType, setSelectedType] = useState<TrailerType>('dry-van');
   const [selectedTier, setSelectedTier] = useState<ModelYearTier>('2020-2023');
   const [quantity, setQuantity] = useState<number>(1);
-  const [estMonthlyMiles, setEstMonthlyMiles] = useState<number>(8500);
   const [copiedQuote, setCopiedQuote] = useState(false);
 
   // Find active tier
@@ -23,12 +22,8 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({ onApplyCon
   const unitMonthlyRate = selectedType === 'dry-van' ? activeTierObj.dryVanRate : activeTierObj.reeferRate;
   const totalMonthlyRate = unitMonthlyRate * quantity;
 
-  // Typical competitor per-mile lease fee is 7 to 9 cents per mile
-  const competitorMileageRate = 0.08;
-  const monthlyMileageSavings = Math.round(estMonthlyMiles * competitorMileageRate * quantity);
-
   const handleCopyQuote = () => {
-    const text = `--- TRIALEDGE RENTALS COMMERCIAL ESTIMATE ---
+    const text = `--- TRAIL EDGE RENTALS COMMERCIAL ESTIMATE ---
 Equipment: 53 ft ${selectedType === 'dry-van' ? 'Dry Van' : 'Reefer'} Trailer (${activeTierObj.label})
 Quantity: ${quantity} Unit(s)
 Unit Monthly Rate: $${unitMonthlyRate.toLocaleString()} / month flat rate
@@ -98,14 +93,12 @@ Email: ${COMPANY_DETAILS.email}
                     <span className="text-xs text-slate-500"> /mo</span>
                   </td>
                   <td className="py-4 px-6">
-                    <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">
-                      $0 Deposit
-                    </span>
+                    <div className="font-bold text-emerald-700 font-mono text-sm">$0.00</div>
+                    <div className="text-[11px] text-slate-500">Zero upfront deposit</div>
                   </td>
                   <td className="py-4 px-6">
-                    <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">
-                      $0 / mile (Unlimited)
-                    </span>
+                    <div className="font-bold text-emerald-700 font-mono text-sm">$0.00 / mi</div>
+                    <div className="text-[11px] text-slate-500">Unlimited coast-to-coast</div>
                   </td>
                   <td className="py-4 px-6 text-xs text-slate-600">
                     <div className="font-medium text-slate-900">Included</div>
@@ -253,32 +246,6 @@ Email: ${COMPANY_DETAILS.email}
                   </div>
                 </div>
               </div>
-
-              {/* Step 4: Estimated Monthly Miles (To show mileage fee savings) */}
-              <div className="pt-2 border-t border-slate-800/80">
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                    Estimated Monthly Miles per Trailer
-                  </label>
-                  <span className="text-xs font-mono text-slate-300 tabular-nums">
-                    {estMonthlyMiles.toLocaleString()} miles / month
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min="3000"
-                  max="15000"
-                  step="500"
-                  value={estMonthlyMiles}
-                  onChange={(e) => setEstMonthlyMiles(parseInt(e.target.value, 10))}
-                  className="w-full accent-emerald-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
-                />
-                <div className="flex justify-between text-[11px] text-slate-500 mt-1 font-mono">
-                  <span>3,000 mi (Regional)</span>
-                  <span>8,500 mi (OTR Avg)</span>
-                  <span>15,000 mi (High Volume)</span>
-                </div>
-              </div>
             </div>
 
             {/* Right Summary Card (5 cols) */}
@@ -317,18 +284,17 @@ Email: ${COMPANY_DETAILS.email}
                   </div>
                 </div>
 
-                {/* Savings Callout */}
-                <div className="mt-6 p-4 rounded-lg bg-emerald-950/40 border border-emerald-800/50 text-xs text-emerald-200">
-                  <div className="flex items-center gap-1.5 font-bold text-emerald-400 mb-1">
-                    <TrendingDown className="w-4 h-4" />
-                    <span>Estimated ~$0.08/mi Competitor Fee Saved:</span>
+                {/* Flat-Rate Assurance Callout */}
+                <div className="mt-6 p-4 rounded-lg bg-slate-800/70 border border-slate-700/80 text-xs text-slate-300 space-y-2">
+                  <div className="font-bold text-white flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Trail Edge Rental Terms</span>
                   </div>
-                  <div className="font-mono text-base font-bold text-white tabular-nums">
-                    +${monthlyMileageSavings.toLocaleString()} / month saved
-                  </div>
-                  <p className="text-[11px] text-emerald-300/80 mt-1">
-                    Based on {estMonthlyMiles.toLocaleString()} miles/mo without per-mile penalty surcharges.
-                  </p>
+                  <ul className="space-y-1 text-[11px] text-slate-400">
+                    <li>• 100% Flat Monthly Rate with zero mileage limits</li>
+                    <li>• No credit holds, bank covenants, or hidden deposits</li>
+                    <li>• Customer inspects and selects trailer on-site before payment</li>
+                  </ul>
                 </div>
               </div>
 

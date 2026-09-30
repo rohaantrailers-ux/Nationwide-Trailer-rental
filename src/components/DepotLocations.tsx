@@ -21,7 +21,7 @@ const DEPOTS: Depot[] = [
     city: 'Dallas / Fort Worth',
     state: 'Texas',
     region: 'South / Texas',
-    hubName: 'TrialEdge DFW Logistics Staging Yard',
+    hubName: 'Trail Edge DFW Logistics Staging Yard',
     dryVanStock: 'High Availability',
     reeferStock: 'High Availability',
     yardAccess: '24/7 Driver Gate Access',
@@ -33,7 +33,7 @@ const DEPOTS: Depot[] = [
     city: 'Atlanta',
     state: 'Georgia',
     region: 'Southeast',
-    hubName: 'TrialEdge Southeast Regional Depot',
+    hubName: 'Trail Edge Southeast Regional Depot',
     dryVanStock: 'High Availability',
     reeferStock: 'Available',
     yardAccess: '24/7 Driver Gate Access',
@@ -45,7 +45,7 @@ const DEPOTS: Depot[] = [
     city: 'Chicago / Gary',
     state: 'Illinois / Indiana',
     region: 'Midwest',
-    hubName: 'TrialEdge Great Lakes Freight Terminal',
+    hubName: 'Trail Edge Great Lakes Freight Terminal',
     dryVanStock: 'High Availability',
     reeferStock: 'High Availability',
     yardAccess: '6:00 AM – 10:00 PM Daily',
@@ -57,7 +57,7 @@ const DEPOTS: Depot[] = [
     city: 'Memphis / West Memphis',
     state: 'Tennessee / Arkansas',
     region: 'South / Texas',
-    hubName: 'TrialEdge Mid-South Logistics Hub',
+    hubName: 'Trail Edge Mid-South Logistics Hub',
     dryVanStock: 'High Availability',
     reeferStock: 'Available',
     yardAccess: '24/7 Driver Gate Access',
@@ -69,7 +69,7 @@ const DEPOTS: Depot[] = [
     city: 'Columbus',
     state: 'Ohio',
     region: 'Midwest',
-    hubName: 'TrialEdge Midwest Crossroads Terminal',
+    hubName: 'Trail Edge Midwest Crossroads Terminal',
     dryVanStock: 'Available',
     reeferStock: 'Available',
     yardAccess: '24/7 Driver Gate Access',
@@ -81,7 +81,7 @@ const DEPOTS: Depot[] = [
     city: 'Ontario / Inland Empire',
     state: 'California',
     region: 'West',
-    hubName: 'TrialEdge West Coast Logistics Yard',
+    hubName: 'Trail Edge West Coast Logistics Yard',
     dryVanStock: 'Available',
     reeferStock: 'Limited Stock',
     yardAccess: '6:00 AM – 8:00 PM Mon-Sat',
@@ -93,7 +93,7 @@ const DEPOTS: Depot[] = [
     city: 'Harrisburg / Allentown',
     state: 'Pennsylvania',
     region: 'Northeast',
-    hubName: 'TrialEdge Northeast Freight Depot',
+    hubName: 'Trail Edge Northeast Freight Depot',
     dryVanStock: 'High Availability',
     reeferStock: 'Available',
     yardAccess: '24/7 Driver Gate Access',
@@ -105,7 +105,7 @@ const DEPOTS: Depot[] = [
     city: 'Kansas City',
     state: 'Missouri / Kansas',
     region: 'Midwest',
-    hubName: 'TrialEdge Central Staging Yard',
+    hubName: 'Trail Edge Central Staging Yard',
     dryVanStock: 'Available',
     reeferStock: 'Available',
     yardAccess: '24/7 Driver Gate Access',
@@ -209,19 +209,20 @@ export const DepotLocations: React.FC<DepotLocationsProps> = ({ onSelectDepot })
                   <div className="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
                     <span className="text-slate-400">53 ft Dry Van:</span>
                     <span
-                      className={`font-semibold ${
+                      className={`font-semibold flex items-center gap-1.5 ${
                         depot.dryVanStock === 'High Availability'
                           ? 'text-emerald-400'
                           : 'text-amber-400'
                       }`}
                     >
+                      <span className={`w-1.5 h-1.5 rounded-full ${depot.dryVanStock === 'High Availability' ? 'bg-emerald-400' : 'bg-amber-400'}`} />
                       {depot.dryVanStock}
                     </span>
                   </div>
                   <div className="flex items-center justify-between p-2 rounded bg-slate-900/80 border border-slate-800">
                     <span className="text-slate-400">53 ft Reefer:</span>
                     <span
-                      className={`font-semibold ${
+                      className={`font-semibold flex items-center gap-1.5 ${
                         depot.reeferStock === 'High Availability'
                           ? 'text-emerald-400'
                           : depot.reeferStock === 'Available'
@@ -229,6 +230,7 @@ export const DepotLocations: React.FC<DepotLocationsProps> = ({ onSelectDepot })
                           : 'text-amber-400'
                       }`}
                     >
+                      <span className={`w-1.5 h-1.5 rounded-full ${depot.reeferStock === 'High Availability' ? 'bg-emerald-400' : depot.reeferStock === 'Available' ? 'bg-blue-400' : 'bg-amber-400'}`} />
                       {depot.reeferStock}
                     </span>
                   </div>

@@ -47,10 +47,10 @@ export const KeyTermsBanner: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">
-            The Nationwide Rental Terms
+            The Trail Edge Rental Advantage
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
-            Rental Terms Built Around Driver & Fleet Cash Flow
+            Rental Terms Built Around Carrier & Fleet Cash Flow
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             Most national leasing corporations force carriers into strict multi-thousand dollar deposits, invasive credit lockouts, and punitive per-mile charges. We operate differently: simple, flat-rate, and driver-first.
@@ -64,29 +64,34 @@ export const KeyTermsBanner: React.FC = () => {
             return (
               <div
                 key={term.title}
-                className="p-6 rounded-lg bg-slate-800/80 border border-slate-700/80 hover:border-amber-400/50 transition-colors flex flex-col justify-between"
+                className="p-6 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-amber-400/50 transition-all flex flex-col justify-between group shadow-sm hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-medium text-amber-400 tracking-wider">
-                      TERM 0{index + 1}
-                    </span>
-                    <span className="text-xs font-medium text-slate-400">
-                      {term.highlight}
-                    </span>
+                    <div className="w-10 h-10 rounded-lg bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[10px] font-mono font-bold text-amber-400/80 tracking-widest block uppercase">
+                        RULE 0{index + 1}
+                      </span>
+                      <span className="text-[11px] font-medium text-slate-400">
+                        {term.highlight}
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
                     {term.title}
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-400 leading-relaxed">
                     {term.description}
                   </p>
                 </div>
 
                 {term.title.includes('Maintenance') && (
-                  <div className="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-300/90 flex items-start gap-1.5">
+                  <div className="mt-4 pt-3 border-t border-slate-800/80 text-xs text-amber-300/90 flex items-start gap-1.5">
                     <span className="font-semibold text-amber-400">* Note:</span>
-                    <span>Maintenance covers the whole trailer except tires and brake chambers.</span>
+                    <span>Maintenance covers whole trailer except tires & brake chambers.</span>
                   </div>
                 )}
               </div>

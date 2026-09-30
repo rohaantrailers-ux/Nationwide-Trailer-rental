@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
           <div>
-            © {new Date().getFullYear()} TrialEdge Rentals. All rights reserved.
+            © {new Date().getFullYear()} Trail Edge Rentals. All rights reserved.
           </div>
           <div className="text-center sm:text-right">
             Important: Pricing is monthly flat rate. Availability depends on trailer type, model year, location, and current inventory. Maintenance covers the whole trailer except tires and brake chambers.

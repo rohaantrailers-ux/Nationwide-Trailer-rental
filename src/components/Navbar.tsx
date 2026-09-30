@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick }) => {
       {/* Top Bar Contract: Zone 1 (Wordmark / Logo) - Zone 2 (Nav links) - Zone 3 (Action) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Zone 1: Single element Brand Logo */}
-        <a href="#" className="flex items-center group shrink-0" aria-label="TrialEdge Rentals Home">
+        <a href="#" className="flex items-center group shrink-0" aria-label="Trail Edge Rentals Home">
           <Logo variant="full" size="md" />
         </a>
 
@@ -42,8 +42,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick }) => {
           ))}
         </nav>
 
-        {/* Zone 3: 1-2 Primary actions */}
+        {/* Zone 3: Actions & Live Dispatch */}
         <div className="hidden sm:flex items-center gap-4 shrink-0">
+          <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-800/60 text-[11px] font-mono text-emerald-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Yard Dispatch Live</span>
+          </div>
+
           <a
             href={`tel:${COMPANY_DETAILS.phone}`}
             className="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors whitespace-nowrap"

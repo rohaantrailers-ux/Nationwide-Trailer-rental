@@ -34,7 +34,7 @@ export const AudienceGrid: React.FC<AudienceGridProps> = ({ onReserveClick }) =>
                 Just Got Your MC Authority? We’ll Get You On The Road.
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-4">
-                Most legacy trailer leasing firms turn down carriers with less than 1 or 2 years in business. At Nationwide Trailer Rental, we understand that new carriers need equipment to build revenue. With your active CDL, COI, and MC letter, you can inspect and rent commercial 53 ft Dry Vans or Reefers with zero deposit.
+                Most legacy trailer leasing firms turn down carriers with less than 1 or 2 years in business. At Trail Edge Rentals, we understand that new carriers need equipment to build revenue. With your active CDL, COI, and MC letter, you can inspect and rent commercial 53 ft Dry Vans or Reefers with zero deposit.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs text-amber-200">
                 <span className="flex items-center gap-1.5">

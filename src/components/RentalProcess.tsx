@@ -40,7 +40,7 @@ export const RentalProcess: React.FC<RentalProcessProps> = ({ onReserveClick }) 
               Simple 4-Step Process
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6">
-              How Nationwide Trailer Rental Works
+              How Trail Edge Rentals Works
             </h2>
             <p className="text-slate-300 text-base leading-relaxed mb-8">
               We eliminate complex financing applications, credit pulls, and days of waiting. Inspect your trailer first, hook up, and settle payment that same day.

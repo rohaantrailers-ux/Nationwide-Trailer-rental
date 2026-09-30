@@ -19,7 +19,7 @@ export const DocumentsChecklist: React.FC = () => {
 
   const completedCount = Object.values(checkedItems).filter(Boolean).length;
 
-  const insuranceNote = `Please issue Certificate of Insurance (COI) listing TrialEdge Rentals as Certificate Holder / Loss Payee. Must include: Commercial Auto Liability ($1M CSL), Physical Damage coverage on non-owned / rented trailer equipment ($35,000 - $50,000 minimum limit), and Trailer Interchange or Non-Owned Trailer endorsement.`;
+  const insuranceNote = `Please issue Certificate of Insurance (COI) listing Trail Edge Rentals as Certificate Holder / Loss Payee. Must include: Commercial Auto Liability ($1M CSL), Physical Damage coverage on non-owned / rented trailer equipment ($35,000 - $50,000 minimum limit), and Trailer Interchange or Non-Owned Trailer endorsement.`;
 
   const handleCopyInsurance = () => {
     navigator.clipboard.writeText(insuranceNote);
@@ -155,7 +155,7 @@ export const DocumentsChecklist: React.FC = () => {
           <div className="flex items-center gap-2 mb-3">
             <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
             <h4 className="text-base font-bold text-slate-950">
-              TrialEdge 5-Point Driver Pre-Trip & Yard Inspection Protocol
+              Trail Edge 5-Point Driver Pre-Trip & Yard Inspection Protocol
             </h4>
           </div>
           <p className="text-xs text-slate-600 mb-5 leading-relaxed">

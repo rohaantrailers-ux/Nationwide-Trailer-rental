@@ -3,7 +3,7 @@ import dryVanImage from '../assets/images/trailer_dry_van_1790796409750.jpg';
 import reeferImage from '../assets/images/trailer_reefer_1790796421668.jpg';
 
 export const COMPANY_DETAILS = {
-  name: 'TrialEdge Rentals',
+  name: 'Trail Edge Rentals',
   tagline: 'Coast-to-Coast 53ft Commercial Fleet & Semi-Trailer Rentals',
   representative: 'Darvis',
   email: 'Darviss@pressurepathwayinc.com',
@@ -169,7 +169,7 @@ export const REQUIRED_DOCUMENTS = [
       'Auto Liability ($1,000,000 combined single limit standard)',
       'Physical Damage coverage ($35k - $50k+ per unit)',
       'Trailer Interchange or Non-Owned Trailer coverage',
-      'TrialEdge Rentals listed as Certificate Holder / Loss Payee',
+      'Trail Edge Rentals listed as Certificate Holder / Loss Payee',
     ],
   },
   {
@@ -191,7 +191,7 @@ export const FAQS = [
   },
   {
     question: 'Do you rent to New Authorities (brand new MC numbers)?',
-    answer: 'Yes! Unlike many national leasing conglomerates that require 1–2 years in business, TrialEdge Rentals actively works with new authorities. As long as you have your active MC/DOT, a valid Class A CDL, and a compliant Certificate of Insurance (COI), you are eligible.',
+    answer: 'Yes! Unlike many national leasing conglomerates that require 1–2 years in business, Trail Edge Rentals actively works with new authorities. As long as you have your active MC/DOT, a valid Class A CDL, and a compliant Certificate of Insurance (COI), you are eligible.',
   },
   {
     question: 'What does the included maintenance cover?',

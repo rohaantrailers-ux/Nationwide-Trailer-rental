@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="TrialEdge Rentals 53 ft commercial semi-trailer on highway"
+          alt="Trail Edge Rentals 53 ft commercial semi-trailer on highway"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
           onError={(e) => {
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
 
           {/* Unboxed editorial kicker - anti-pill */}
           <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-amber-400 mb-4 tracking-wide uppercase">
-            <span>TrialEdge Coast-to-Coast Fleet</span>
+            <span>Trail Edge Coast-to-Coast Fleet</span>
             <span aria-hidden="true">·</span>
             <span>53 ft Dry Vans & Reefers</span>
             <span aria-hidden="true">·</span>
@@ -73,16 +73,19 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
           </div>
 
           {/* Direct Sales Rep Ribbon */}
-          <div className="p-4 rounded-lg bg-slate-900/90 border border-slate-800 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="p-4 sm:p-5 rounded-xl bg-slate-900/95 border border-slate-800 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 font-bold shrink-0">
+              <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 font-black text-lg shadow-sm shrink-0">
                 D
               </div>
               <div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Direct Sales & Dispatch Representative</div>
-                <div className="text-sm font-bold text-white flex items-center gap-2">
+                <div className="text-[11px] text-amber-400 uppercase tracking-wider font-bold flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Senior Commercial Fleet Dispatcher</span>
+                </div>
+                <div className="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
                   <span>{COMPANY_DETAILS.representative}</span>
-                  <span className="text-xs font-normal text-slate-400">· TrialEdge Rentals</span>
+                  <span className="text-xs font-normal text-slate-400">· Trail Edge Rentals Commercial Fleet</span>
                 </div>
               </div>
             </div>
@@ -90,14 +93,14 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
             <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
               <a
                 href={`tel:${COMPANY_DETAILS.phone}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-amber-400/10 text-amber-300 hover:bg-amber-400/20 border border-amber-400/30 transition-colors font-mono font-medium"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-amber-400 text-slate-950 hover:bg-amber-300 transition-colors font-mono font-bold shadow-sm"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span>{COMPANY_DETAILS.phoneDisplay}</span>
               </a>
               <a
                 href={`mailto:${COMPANY_DETAILS.email}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors border border-slate-700 font-medium"
               >
                 <Mail className="w-3.5 h-3.5 text-slate-400" />
                 <span className="truncate max-w-[200px]">{COMPANY_DETAILS.email}</span>

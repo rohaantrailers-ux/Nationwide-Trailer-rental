@@ -67,9 +67,12 @@ export const EquipmentShowcase: React.FC<EquipmentShowcaseProps> = ({ onSelectTr
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 text-xs font-bold text-slate-950 bg-amber-400 rounded shadow-sm">
+              <div className="absolute top-4 left-4 flex flex-col items-start gap-1.5">
+                <span className="px-3 py-1 text-xs font-bold text-slate-950 bg-amber-400 rounded shadow-md font-mono">
                   Model Years {currentSpec.modelYears}
+                </span>
+                <span className="px-2.5 py-0.5 text-[10px] font-mono text-white bg-slate-950/85 backdrop-blur-sm rounded border border-white/20">
+                  53' × 102" × 13'6" · Air-Ride Slider
                 </span>
               </div>
             </div>

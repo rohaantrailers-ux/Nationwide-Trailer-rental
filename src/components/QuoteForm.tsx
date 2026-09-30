@@ -77,7 +77,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   };
 
   const generateSummaryText = () => {
-    return `TrialEdge Rentals Fleet Inquiry:
+    return `Trail Edge Rentals Fleet Inquiry:
 Contact: ${formData.fullName} (${formData.companyName})
 Phone: ${formData.phone}
 Email: ${formData.email}
