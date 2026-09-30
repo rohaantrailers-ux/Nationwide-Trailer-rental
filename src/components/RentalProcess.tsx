@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileCheck, MapPin, Eye, CheckCircle2, ArrowRight } from 'lucide-react';
+import yardFleetImage from '../assets/images/trailer_yard_fleet_1790796433206.jpg';
 
 interface RentalProcessProps {
   onReserveClick: () => void;
@@ -75,7 +76,7 @@ export const RentalProcess: React.FC<RentalProcessProps> = ({ onReserveClick }) 
           {/* Right Column: Yard Visual */}
           <div className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
             <img
-              src="/src/assets/images/trailer_yard_fleet_1790796433206.jpg"
+              src={yardFleetImage}
               alt="Commercial 53 ft trailer staging yard ready for customer inspection"
               referrerPolicy="no-referrer"
               className="w-full h-80 lg:h-96 object-cover object-center"

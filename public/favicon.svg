@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#061426"/>
+  <!-- Patriotic speed arcs -->
+  <path d="M 6 46 C 14 22, 34 8, 54 8 C 42 14, 28 24, 20 40 Z" fill="#FFFFFF"/>
+  <path d="M 12 48 C 22 28, 44 16, 58 16 C 46 22, 32 30, 24 44 Z" fill="#EF4444"/>
+  <!-- Truck cab -->
+  <path d="M 38 20 L 48 20 L 52 28 L 60 33 L 60 48 L 56 48 C 56 43, 50 43, 50 48 L 44 48 C 44 43, 38 43, 38 48 L 36 48 L 36 22 Z" fill="#FFFFFF"/>
+  <path d="M 48 22 L 52 28 L 58 32 L 58 25 Z" fill="#0B1B2F"/>
+  <circle cx="53" cy="48" r="4" fill="#0B1B2F"/>
+  <circle cx="53" cy="48" r="2" fill="#FFFFFF"/>
+  <circle cx="41" cy="48" r="4" fill="#0B1B2F"/>
+  <circle cx="41" cy="48" r="2" fill="#FFFFFF"/>
+</svg>

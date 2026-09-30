@@ -1,4 +1,6 @@
 import { PricingTier, TrailerSpec } from '../types';
+import dryVanImage from '../assets/images/trailer_dry_van_1790796409750.jpg';
+import reeferImage from '../assets/images/trailer_reefer_1790796421668.jpg';
 
 export const COMPANY_DETAILS = {
   name: 'Nationwide Trailer Rental',
@@ -51,7 +53,7 @@ export const TRAILER_SPECS: Record<'dry-van' | 'reefer', TrailerSpec> = {
     id: 'dry-van',
     name: '53 ft Dry Van Commercial Trailer',
     subtitle: 'Standard dry freight workhorse with air-ride suspension and commercial swing doors',
-    image: '/src/assets/images/trailer_dry_van_1790796409750.jpg',
+    image: dryVanImage,
     length: '53 ft (636 inches)',
     width: '102 inches standard',
     height: '13 ft 6 inches overall',
@@ -74,7 +76,7 @@ export const TRAILER_SPECS: Record<'dry-van' | 'reefer', TrailerSpec> = {
     id: 'reefer',
     name: '53 ft Refrigerated (Reefer) Trailer',
     subtitle: 'High-cube temperature-controlled trailer for frozen, chilled, and sensitive freight',
-    image: '/src/assets/images/trailer_reefer_1790796421668.jpg',
+    image: reeferImage,
     length: '53 ft (636 inches)',
     width: '102 inches (insulated composite walls)',
     height: '13 ft 6 inches overall',

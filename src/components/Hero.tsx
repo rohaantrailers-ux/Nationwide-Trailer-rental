@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2, MapPin, Mail, Sparkles } from 'lucide-react';
 import { COMPANY_DETAILS } from '../data/trailerData';
 import { Logo } from './Logo';
+import heroImage from '../assets/images/hero_freight_trailer_1790796397096.jpg';
 
 interface HeroProps {
   onCheckRatesClick: () => void;
@@ -14,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
       {/* Background Image with Measured Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_freight_trailer_1790796397096.jpg"
+          src={heroImage}
           alt="Nationwide 53 ft commercial semi-trailer on highway"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
