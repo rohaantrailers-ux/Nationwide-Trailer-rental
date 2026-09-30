@@ -4,7 +4,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './', // Ensures relative path loading on GitHub Pages
+  base: './', // Use relative paths to prevent 404 URL mismatches
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
