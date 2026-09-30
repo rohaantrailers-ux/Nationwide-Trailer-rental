@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { PRICING_TIERS } from '../data/trailerData';
+import { PRICING_TIERS, COMPANY_DETAILS } from '../data/trailerData';
 import { TrailerType, ModelYearTier } from '../types';
-import { Check, ShieldCheck, ArrowRight, Calculator, Sparkles, TrendingDown } from 'lucide-react';
+import { Check, ShieldCheck, ArrowRight, Calculator, Sparkles, TrendingDown, Copy, FileText } from 'lucide-react';
 
 interface PricingCalculatorProps {
   onApplyConfiguration: (config: {
@@ -16,6 +16,7 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({ onApplyCon
   const [selectedTier, setSelectedTier] = useState<ModelYearTier>('2020-2023');
   const [quantity, setQuantity] = useState<number>(1);
   const [estMonthlyMiles, setEstMonthlyMiles] = useState<number>(8500);
+  const [copiedQuote, setCopiedQuote] = useState(false);
 
   // Find active tier
   const activeTierObj = PRICING_TIERS.find((t) => t.tier === selectedTier) || PRICING_TIERS[1];
@@ -25,6 +26,25 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({ onApplyCon
   // Typical competitor per-mile lease fee is 7 to 9 cents per mile
   const competitorMileageRate = 0.08;
   const monthlyMileageSavings = Math.round(estMonthlyMiles * competitorMileageRate * quantity);
+
+  const handleCopyQuote = () => {
+    const text = `--- TRIALEDGE RENTALS COMMERCIAL ESTIMATE ---
+Equipment: 53 ft ${selectedType === 'dry-van' ? 'Dry Van' : 'Reefer'} Trailer (${activeTierObj.label})
+Quantity: ${quantity} Unit(s)
+Unit Monthly Rate: $${unitMonthlyRate.toLocaleString()} / month flat rate
+Total Monthly Flat Rate: $${totalMonthlyRate.toLocaleString()} / month
+Deposit: $0.00 (Zero Deposit Required)
+Per-Mile Fee: $0.00 (Unlimited Mileage Coast-to-Coast)
+Maintenance: Included (covers trailer structure/components; excludes tires & brake chambers)
+Payment Terms: Same-day settlement after driver inspection & pickup
+Representative: ${COMPANY_DETAILS.representative}
+Hotline: ${COMPANY_DETAILS.phoneDisplay}
+Email: ${COMPANY_DETAILS.email}
+---------------------------------------------`;
+    navigator.clipboard.writeText(text);
+    setCopiedQuote(true);
+    setTimeout(() => setCopiedQuote(false), 2500);
+  };
 
   return (
     <section id="rates" className="py-20 bg-white text-slate-900 border-t border-slate-200">
@@ -327,6 +347,25 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({ onApplyCon
                   <span>Lock In This Configuration</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
+
+                <button
+                  type="button"
+                  onClick={handleCopyQuote}
+                  className="w-full py-2.5 px-4 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 hover:text-white rounded transition-colors flex items-center justify-center gap-2 cursor-pointer border border-slate-700"
+                >
+                  {copiedQuote ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-emerald-400 font-bold">Quote Copied to Clipboard!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-slate-400" />
+                      <span>Copy Official Quote Summary</span>
+                    </>
+                  )}
+                </button>
+
                 <p className="text-center text-[11px] text-slate-500">
                   Transfers directly to reservation inquiry. No obligation.
                 </p>

@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Nationwide 53 ft commercial semi-trailer on highway"
+          alt="TrialEdge Rentals 53 ft commercial semi-trailer on highway"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
           onError={(e) => {
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
 
           {/* Unboxed editorial kicker - anti-pill */}
           <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-amber-400 mb-4 tracking-wide uppercase">
-            <span>Nationwide US Availability</span>
+            <span>TrialEdge Coast-to-Coast Fleet</span>
             <span aria-hidden="true">·</span>
             <span>53 ft Dry Vans & Reefers</span>
             <span aria-hidden="true">·</span>
@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight mb-6">
-            Commercial 53 ft Trailer Rentals Built for Real Carriers.
+            Commercial 53 ft Trailer Fleet Rentals Built for Real Carriers.
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onCheckRatesClick, onReserveClick })
                 <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Direct Sales & Dispatch Representative</div>
                 <div className="text-sm font-bold text-white flex items-center gap-2">
                   <span>{COMPANY_DETAILS.representative}</span>
-                  <span className="text-xs font-normal text-slate-400">· Nationwide Trailer Rental</span>
+                  <span className="text-xs font-normal text-slate-400">· TrialEdge Rentals</span>
                 </div>
               </div>
             </div>

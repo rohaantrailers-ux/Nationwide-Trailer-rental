@@ -26,7 +26,7 @@ export const Logo: React.FC<LogoProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`${heightClasses[size]} w-auto ${className}`}
-        aria-label="Nationwide Trailer Rentals Logo Mark"
+        aria-label="TrialEdge Rentals Logo Mark"
       >
         {/* Speed arcs */}
         {/* Top white arc */}
@@ -191,13 +191,13 @@ export const Logo: React.FC<LogoProps> = ({
         <circle cx="108" cy="59" r="1.3" fill="#0B1B2F" />
       </svg>
 
-      {/* Typography: Line 1 NATIONWIDE, Line 2 TRAILER RENTALS (USA) */}
+      {/* Typography: TRIALEDGE RENTALS */}
       <div className="flex flex-col justify-center leading-none text-left">
-        <span className="font-black tracking-tight text-white uppercase text-base sm:text-lg md:text-xl font-sans">
-          NATIONWIDE
+        <span className="font-black tracking-tight text-white uppercase text-base sm:text-lg md:text-xl font-sans flex items-center gap-1">
+          TRIAL<span className="text-amber-400">EDGE</span>
         </span>
-        <span className="font-bold tracking-wider text-slate-200 uppercase text-[9px] sm:text-[10px] md:text-[11px] mt-0.5 sm:mt-1 font-sans">
-          TRAILER RENTALS (USA)
+        <span className="font-bold tracking-widest text-slate-300 uppercase text-[9px] sm:text-[10px] md:text-[11px] mt-0.5 sm:mt-1 font-sans">
+          RENTALS · COMMERCIAL FLEET
         </span>
       </div>
     </div>

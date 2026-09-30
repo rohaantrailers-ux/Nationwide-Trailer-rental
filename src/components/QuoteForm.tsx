@@ -8,12 +8,14 @@ interface QuoteFormProps {
   initialTrailerType?: TrailerType;
   initialModelTier?: ModelYearTier;
   initialQuantity?: number;
+  initialLocation?: string;
 }
 
 export const QuoteForm: React.FC<QuoteFormProps> = ({
   initialTrailerType = 'dry-van',
   initialModelTier = '2020-2023',
   initialQuantity = 1,
+  initialLocation = 'Texas (TX)',
 }) => {
   const [formData, setFormData] = useState<QuoteFormData>({
     fullName: '',
@@ -25,7 +27,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
     trailerType: initialTrailerType,
     modelYearTier: initialModelTier,
     quantity: initialQuantity,
-    pickupState: 'Texas (TX)',
+    pickupState: initialLocation,
     targetDate: '',
     durationMonths: 3,
     notes: '',
@@ -43,8 +45,9 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       trailerType: initialTrailerType,
       modelYearTier: initialModelTier,
       quantity: initialQuantity,
+      ...(initialLocation ? { pickupState: initialLocation } : {}),
     }));
-  }, [initialTrailerType, initialModelTier, initialQuantity]);
+  }, [initialTrailerType, initialModelTier, initialQuantity, initialLocation]);
 
   const activeTierObj = PRICING_TIERS.find((t) => t.tier === formData.modelYearTier) || PRICING_TIERS[1];
   const unitRate = formData.trailerType === 'dry-van' ? activeTierObj.dryVanRate : activeTierObj.reeferRate;
@@ -74,7 +77,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   };
 
   const generateSummaryText = () => {
-    return `Nationwide Trailer Rental Inquiry:
+    return `TrialEdge Rentals Fleet Inquiry:
 Contact: ${formData.fullName} (${formData.companyName})
 Phone: ${formData.phone}
 Email: ${formData.email}

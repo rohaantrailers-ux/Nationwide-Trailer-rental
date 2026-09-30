@@ -3,7 +3,8 @@ import dryVanImage from '../assets/images/trailer_dry_van_1790796409750.jpg';
 import reeferImage from '../assets/images/trailer_reefer_1790796421668.jpg';
 
 export const COMPANY_DETAILS = {
-  name: 'Nationwide Trailer Rental',
+  name: 'TrialEdge Rentals',
+  tagline: 'Coast-to-Coast 53ft Commercial Fleet & Semi-Trailer Rentals',
   representative: 'Darvis',
   email: 'Darviss@pressurepathwayinc.com',
   phone: '+1 325 266 1801',
@@ -168,7 +169,7 @@ export const REQUIRED_DOCUMENTS = [
       'Auto Liability ($1,000,000 combined single limit standard)',
       'Physical Damage coverage ($35k - $50k+ per unit)',
       'Trailer Interchange or Non-Owned Trailer coverage',
-      'Nationwide Trailer Rental listed as Certificate Holder / Loss Payee',
+      'TrialEdge Rentals listed as Certificate Holder / Loss Payee',
     ],
   },
   {
@@ -190,7 +191,7 @@ export const FAQS = [
   },
   {
     question: 'Do you rent to New Authorities (brand new MC numbers)?',
-    answer: 'Yes! Unlike many national leasing conglomerates that require 1–2 years in business, Nationwide Trailer Rental actively works with new authorities. As long as you have your active MC/DOT, a valid Class A CDL, and a compliant Certificate of Insurance (COI), you are eligible.',
+    answer: 'Yes! Unlike many national leasing conglomerates that require 1–2 years in business, TrialEdge Rentals actively works with new authorities. As long as you have your active MC/DOT, a valid Class A CDL, and a compliant Certificate of Insurance (COI), you are eligible.',
   },
   {
     question: 'What does the included maintenance cover?',

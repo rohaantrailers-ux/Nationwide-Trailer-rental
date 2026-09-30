@@ -19,7 +19,7 @@ export const DocumentsChecklist: React.FC = () => {
 
   const completedCount = Object.values(checkedItems).filter(Boolean).length;
 
-  const insuranceNote = `Please issue Certificate of Insurance (COI) listing Nationwide Trailer Rental as Certificate Holder / Loss Payee. Must include: Commercial Auto Liability ($1M CSL), Physical Damage coverage on non-owned / rented trailer equipment ($35,000 - $50,000 minimum limit), and Trailer Interchange or Non-Owned Trailer endorsement.`;
+  const insuranceNote = `Please issue Certificate of Insurance (COI) listing TrialEdge Rentals as Certificate Holder / Loss Payee. Must include: Commercial Auto Liability ($1M CSL), Physical Damage coverage on non-owned / rented trailer equipment ($35,000 - $50,000 minimum limit), and Trailer Interchange or Non-Owned Trailer endorsement.`;
 
   const handleCopyInsurance = () => {
     navigator.clipboard.writeText(insuranceNote);
@@ -147,6 +147,52 @@ export const DocumentsChecklist: React.FC = () => {
           </div>
           <div className="p-3.5 rounded bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto select-all">
             {insuranceNote}
+          </div>
+        </div>
+
+        {/* 5-Point Driver Yard Inspection Guide */}
+        <div className="mt-8 p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+            <h4 className="text-base font-bold text-slate-950">
+              TrialEdge 5-Point Driver Pre-Trip & Yard Inspection Protocol
+            </h4>
+          </div>
+          <p className="text-xs text-slate-600 mb-5 leading-relaxed">
+            Because payment is settled <strong>same day after pickup</strong>, we encourage drivers and dispatchers to conduct a thorough pre-trip walkaround with our yard attendant before hooking up:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="font-bold text-slate-900 mb-1">1. Landing Gear</div>
+              <p className="text-slate-600 text-[11px]">
+                Test high and low crank gears; verify sand shoes and bracing integrity.
+              </p>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="font-bold text-slate-900 mb-1">2. Air Lines & Seals</div>
+              <p className="text-slate-600 text-[11px]">
+                Inspect red/blue glad hands, rubber gaskets, and emergency breakaway lines.
+              </p>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="font-bold text-slate-900 mb-1">3. Swing Doors & Cams</div>
+              <p className="text-slate-600 text-[11px]">
+                Confirm dual locking cam bars engage smoothly and rubber seals are tight.
+              </p>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="font-bold text-slate-900 mb-1">4. Lighting & Wiring</div>
+              <p className="text-slate-600 text-[11px]">
+                Verify marker lamps, brake lights, ABS indicator, and 7-way electrical pin.
+              </p>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="font-bold text-slate-900 mb-1">5. Tires & Brakes</div>
+              <p className="text-slate-600 text-[11px]">
+                Inspect tire tread depth and check brake chambers with yard staff.
+              </p>
+            </div>
           </div>
         </div>
       </div>

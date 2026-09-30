@@ -13,9 +13,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick }) => {
   const navLinks = [
     { label: 'Equipment', href: '#equipment' },
     { label: 'Monthly Rates', href: '#rates' },
+    { label: 'Staging Depots', href: '#depots' },
     { label: 'Rental Terms', href: '#terms' },
     { label: 'Required Documents', href: '#documents' },
-    { label: 'Rate Calculator', href: '#calculator' },
+    { label: 'Rate Calculator', href: '#rates' },
     { label: 'FAQ', href: '#faq' },
   ];
 
@@ -24,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onReserveClick }) => {
       {/* Top Bar Contract: Zone 1 (Wordmark / Logo) - Zone 2 (Nav links) - Zone 3 (Action) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         {/* Zone 1: Single element Brand Logo */}
-        <a href="#" className="flex items-center group shrink-0" aria-label="Nationwide Trailer Rentals (USA) Home">
+        <a href="#" className="flex items-center group shrink-0" aria-label="TrialEdge Rentals Home">
           <Logo variant="full" size="md" />
         </a>
 

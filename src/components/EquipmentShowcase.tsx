@@ -213,6 +213,82 @@ export const EquipmentShowcase: React.FC<EquipmentShowcaseProps> = ({ onSelectTr
             </button>
           </div>
         </div>
+
+        {/* Detailed Side-by-Side Technical Comparison Table */}
+        <div className="mt-8 bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <div className="p-5 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold text-amber-400 uppercase tracking-wider">
+                Engineering & Fleet Specs
+              </div>
+              <h3 className="text-lg font-bold text-white">
+                Technical Comparison: Dry Van vs. Reefer Fleet
+              </h3>
+            </div>
+            <div className="text-xs text-slate-400">
+              Commercial-grade 53' × 102" × 13'6" specifications
+            </div>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr className="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold uppercase tracking-wider">
+                  <th className="py-3 px-5">Specification</th>
+                  <th className="py-3 px-5 text-amber-800">53 ft Dry Van</th>
+                  <th className="py-3 px-5 text-blue-800">53 ft Reefer (Refrigerated)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-600">
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Length × Width × Height</td>
+                  <td className="py-3 px-5">53 ft (636") × 102" × 13 ft 6 in</td>
+                  <td className="py-3 px-5">53 ft (636") × 102" × 13 ft 6 in</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Interior Cubic Volume</td>
+                  <td className="py-3 px-5 font-mono font-medium text-slate-900">~4,050 cu. ft.</td>
+                  <td className="py-3 px-5 font-mono font-medium text-slate-900">~3,860 cu. ft. (Insulated)</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Suspension System</td>
+                  <td className="py-3 px-5">Air-Ride Tandem Slider (Hendrickson VANTRAAX)</td>
+                  <td className="py-3 px-5">Air-Ride Tandem Slider (Heavy-Duty Air Bags)</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Flooring System</td>
+                  <td className="py-3 px-5">1-3/8" Laminated Oak/Hardwood (20k lb axle rating)</td>
+                  <td className="py-3 px-5">Extruded Heavy-Duty Aluminum Duct T-Floor</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Doors & Latches</td>
+                  <td className="py-3 px-5">Heavy-Duty Dual-Cam Swing Doors with rubber seals</td>
+                  <td className="py-3 px-5">Thermal Insulated Swing Doors with multi-lip gaskets</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Fifth Wheel / Kingpin Setting</td>
+                  <td className="py-3 px-5">36-inch standard road tractor pin setting</td>
+                  <td className="py-3 px-5">36-inch standard road tractor pin setting</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Cargo Control & Posts</td>
+                  <td className="py-3 px-5">Logistics A/E-track posts on 16" / 24" centers</td>
+                  <td className="py-3 px-5">Recessed E-track logistics rails in side composite walls</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Temperature Control</td>
+                  <td className="py-3 px-5 text-slate-400">Ambient / Non-temperature controlled</td>
+                  <td className="py-3 px-5 font-semibold text-blue-700">-20°F to +70°F Continuous (Carrier/Thermo King)</td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="py-3 px-5 font-semibold text-slate-900">Pre-Trip Staging Inspection</td>
+                  <td className="py-3 px-5 font-semibold text-emerald-600">✓ Road-ready certified before customer hookup</td>
+                  <td className="py-3 px-5 font-semibold text-emerald-600">✓ Reefer unit run-tested & pre-cooled prior to pickup</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   );
