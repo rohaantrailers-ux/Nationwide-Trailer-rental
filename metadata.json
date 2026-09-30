@@ -2,5 +2,7 @@
   "name": "Nationwide Trailer Rental",
   "description": "Commercial 53 ft Dry Van and Reefer trailer rentals across the US. Flat-rate monthly pricing, zero deposit, unlimited mileage, maintenance included, and same-day post-pickup payment.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
